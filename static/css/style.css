@@ -1,0 +1,438 @@
+/**
+ *  Main style source
+ *
+ *  @document style.css
+ *  @author A van Kempen <info@avkempen.nl>
+ *  @copyright Av Kempen 2016 <http://www.avkempen.nl>
+ *  @version: 1.1
+ 
+	* This CSS contains:
+		* Reset
+		* Text rendering
+		* Body
+		* Default styles
+		* Transition
+		* Colors 
+		* Rounded corners
+		* Header
+		* Container
+		* Section
+		* Footer
+		* Handy
+		* Additional
+		* Columns
+ **/
+ 
+/* Reset */
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var {background:transparent;border:0 none;font-size:100%;margin:0;padding:0;border:0;outline:0;vertical-align:top}
+blockquote, q {quotes:none}
+table, table td {padding:0;border:none;border-collapse:collapse}
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block}
+mark, rp, rt, ruby, summary, time {display:inline}
+input:focus,textarea:focus{outline:0}
+
+
+/* Text rendering */
+* {
+	text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-webkit-text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box
+}
+
+html, body {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+}
+
+/* Body */
+body {
+	background: #f1f1f1;
+	background-image: url('../images/background.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	
+	color: #333333;
+	font: 12px "Droid Sans", tahoma, verdana; 
+}
+
+/* Default styles */
+a {
+	color: #333333;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+h1 { 
+	font-size: 40px;
+	line-height: 60px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+h3 { 
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+	h1 { 
+		font-size: 60px;
+		line-height: 100px;
+	}
+	
+	h2 {
+		font-size: 40px;
+		line-height: 80px;
+	}
+	
+	h3 { 
+		font-size: 25px;
+		line-height: 50px;
+	}	
+}
+
+p {
+	line-height: 18px;	
+	margin: 0 0 1em 0;
+}
+
+p.lead {
+	font-size: 16px;
+	line-height: 26px;	
+}
+
+.bold {
+	font-weight: bold;	
+}
+
+.italic {
+	font-style: italic;	
+}
+
+.align-center {
+	text-align: center;	
+}
+
+.align-left {
+	text-align: left;	
+}
+
+.align-right {
+	text-align: right;	
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;	
+}
+
+hr {
+	background: #ccc;
+	border: 0;
+	height: 1px;
+	margin: 10px 0;
+}	
+
+/* Transition */
+.transition-normal {
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;	
+}
+
+.transition-short {
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+}
+
+.transition-long {
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+/* Colors */
+.block-white {
+	background-color: #ffffff;	
+}
+
+.text-white {
+	color: #fff;	
+}
+
+.block-blue {
+	background-color: #3DA8FF;	
+}
+
+.text-blue {
+	color: #3DA8FF;	
+}
+
+/* Shadow */
+.block-shadow {
+	box-shadow: 0 0 15px rgba(0,0,0,0.1);	
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);	
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.1);	
+	-ms-box-shadow: 0 0 15px rgba(0,0,0,0.1);	
+	-o-box-shadow: 0 0 15px rgba(0,0,0,0.1);	
+}
+
+.block-shadow-light {
+	box-shadow: 0 0 15px rgba(0,0,0,0.25);	
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.25);	
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.25);	
+	-ms-box-shadow: 0 0 15px rgba(0,0,0,0.25);	
+	-o-box-shadow: 0 0 15px rgba(0,0,0,0.25);	
+}
+
+.block-shadow-dark {
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);	
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5);	
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.5);	
+	-ms-box-shadow: 0 0 15px rgba(0,0,0,0.5);	
+	-o-box-shadow: 0 0 15px rgba(0,0,0,0.5);	
+}
+
+/* Rounded corners */
+.small-rounded {
+	border-radius: 3px;	
+	-webkit-border-radius: 3px;	
+	-moz-border-radius: 3px;	
+}
+
+.medium-rounded {
+	border-radius: 5px;	
+	-webkit-border-radius: 5px;	
+	-moz-border-radius: 5px;	
+}
+
+.large-rounded {
+	border-radius: 10px;	
+	-webkit-border-radius: 10px;	
+	-moz-border-radius: 10px;	
+}
+
+.full-rounded {
+	border-radius: 50%;	
+	-webkit-border-radius: 50%;		
+	-moz-border-radius: 50%;		
+}
+
+/* Logo */
+.logo {
+	background-image: url('../images/logo.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	
+	box-shadow: 0 10px 15px rgba(0,0,0,0.5);	
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.5);	
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.5);	
+	
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+	.logo {
+		width: 120px;
+		height: 120px;	
+	}	
+}
+
+/* Header */
+header {
+	display: block;
+	padding: 5px;
+	z-index: 10;
+}
+
+header h1 {
+	display: inline-block;
+	padding-top: 10px;
+    padding-left: 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Times New Roman";
+    font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+	header h1 {
+		padding-top: 20px;
+		padding-left: 25px;
+		font-size: 50px;
+		line-height: 60px;
+	}
+}
+
+/* Container */
+.container {
+	width: 90%;
+	margin: 0 auto;	
+	position: relative;
+	z-index: 5;
+}
+
+/* Section */
+section {
+	display: block;
+	position: relative;
+	z-index: 1;
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.section-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;	
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+}
+
+/* Footer */
+footer {
+	background: #2c353e;
+	border-top: 1px solid #444444;
+	color: #ffffff;
+}
+
+footer a,
+footer a:hover {
+	color: #ffffff;	
+	text-decoration: none;
+}
+
+/* Handy */
+.full-height {
+	height: 100vh;	
+}
+
+.table-content {
+	display: table;	
+}
+
+.middle-content {
+	vertical-align: middle;
+	display: table-cell;	
+}
+
+.add-space {
+	padding: 25px;	
+}
+
+.clear {
+	clear: both;	
+}
+
+.underline {
+	text-decoration: underline;	
+}
+
+/* Additional */
+.time,
+.day {
+	font-weight: bold;	
+}
+
+/* Columns */
+.column-1, .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8, .column-9, .column-10, .column-11, .column-12 {
+	display: inline-block;
+	float: left;
+	position: relative;
+	padding: 0 15px;	
+}
+
+.column-12 {
+    width: 100%
+}
+
+.column-11 {
+    width: 91.66666667%
+}
+
+.column-10 {
+    width: 83.33333333%
+}
+
+.column-9 {
+    width: 75%
+}
+
+.column-8 {
+    width: 66.66666667%
+}
+
+.column-7 {
+    width: 58.33333333%
+}
+
+.column-6 {
+    width: 50%
+}
+
+.column-5 {
+    width: 41.66666667%
+}
+
+.column-4 {
+    width: 33.33333333%
+}
+
+.column-3 {
+    width: 25%
+}
+
+.column-2 {
+    width: 16.66666667%
+}
+
+.column-1 {
+    width: 8.33333333%
+}
+
+@media screen and (max-width: 768px) {
+	.column-1, .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8, .column-9, .column-10, .column-11, .column-12 {
+		width: 100%;	
+		float: inherit;
+	}	
+}
